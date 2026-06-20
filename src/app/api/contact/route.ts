@@ -2,8 +2,6 @@ export const runtime = 'edge'
 
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 interface FormData {
   name: string
   email: string
@@ -53,6 +51,13 @@ export async function POST(req: Request) {
   const sanitizedMessage = message.replace(/[<>]/g, '')
 
   try {
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY is not set')
+      return new Response(JSON.stringify({ error: 'Server misconfiguration' }), { status: 500 })
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY)
+    
     const { error } = await resend.emails.send({
       from: `Contact Form <no-reply@ashlok.dev>`,
       to: ['kishanvishwakarma6414@gmail.com'],
