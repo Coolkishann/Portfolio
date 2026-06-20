@@ -11,14 +11,17 @@ import { useLanguage } from '@/components/language-provider'
 type FilterType = 'all' | 'fullstack' | 'frontend'
 
 // Categorize projects by title
-const FRONTEND_PROJECTS = [
+const FRONTEND_PROJECT_KEYWORDS = [
   'moto edge 60 fusion showcase',
   'cinematic studio portfolio',
+  'srcstash',
+  'novashape',
 ]
 
-const isFrontendProject = (title: string) =>
-  FRONTEND_PROJECTS.includes(title.toLowerCase())
-
+const isFrontendProject = (title: string) => {
+  const t = title.toLowerCase()
+  return FRONTEND_PROJECT_KEYWORDS.some((keyword) => t.includes(keyword))
+}
 const getIconKey = (tag: string): string => {
   const t = tag.toLowerCase().trim()
   if (t === 'go' || t === 'golang') return 'go'
@@ -101,8 +104,8 @@ function ProjectCard({ project }: { project: Project }) {
                 {project.date}
               </span>
               <span className={`font-mono text-[9px] uppercase tracking-wider px-1.5 py-0.5 rounded-full border ${isFrontendProject(project.title)
-                  ? 'text-violet-400/80 border-violet-500/20 bg-violet-500/5'
-                  : 'text-emerald-400/80 border-emerald-500/20 bg-emerald-500/5'
+                ? 'text-violet-400/80 border-violet-500/20 bg-violet-500/5'
+                : 'text-emerald-400/80 border-emerald-500/20 bg-emerald-500/5'
                 }`}>
                 {isFrontendProject(project.title) ? 'Frontend' : 'Full Stack'}
               </span>
@@ -318,8 +321,8 @@ export default function ProjectsPage() {
                     key={f.key}
                     onClick={() => setFilter(f.key)}
                     className={`relative px-4 py-1.5 rounded-full font-mono text-[10px] font-bold uppercase tracking-wider transition-colors duration-300 select-none cursor-pointer ${isActive
-                        ? 'text-white'
-                        : 'text-muted-foreground hover:text-foreground'
+                      ? 'text-white'
+                      : 'text-muted-foreground hover:text-foreground'
                       }`}
                   >
                     {isActive && (

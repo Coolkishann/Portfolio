@@ -44,18 +44,13 @@ export const skills: Skill[] = [
   { skill_name: 'stitch', Image: '/stitch.png', width: 80, height: 80, category: 'ai' },
   { skill_name: 'chatgpt', Image: '/chatgpt.png', width: 80, height: 80, category: 'ai' },
   { skill_name: 'perplexity', Image: '/perplexity.png', width: 80, height: 80, category: 'ai' },
-  { skill_name: 'bolt', Image: '/bolt.png', width: 80, height: 80, category: 'ai' },
   { skill_name: 'lovable', Image: '/lovable.png', width: 80, height: 80, category: 'ai' },
   { skill_name: 'antigravity', Image: '/antigravity.png', width: 80, height: 80, category: 'ai' },
-  { skill_name: 'omni', Image: '/omni.png', width: 80, height: 80, category: 'ai' },
-
-  { skill_name: 'webflow', Image: '/webflow.png', width: 80, height: 80, category: 'design' },
-  { skill_name: 'awwwards', Image: '/awwwards.png', width: 80, height: 80, category: 'design' },
-  { skill_name: 'dribbble', Image: '/dribbble.png', width: 80, height: 80, category: 'design' },
-
-  { skill_name: 'gsap', Image: '/gsap.png', width: 80, height: 80, category: 'frontend' },
-  { skill_name: 'threejs', Image: '/threejs.png', width: 80, height: 80, category: 'frontend' },
-  { skill_name: 'barbajs', Image: '/barbajs.png', width: 80, height: 80, category: 'frontend' },
+  { skill_name: 'webflow', Image: 'https://cdn.simpleicons.org/webflow/white', width: 80, height: 80, category: 'design' },
+  { skill_name: 'dribbble', Image: 'https://cdn.simpleicons.org/dribbble/white', width: 80, height: 80, category: 'design' },
+  { skill_name: 'awwwards', Image: 'https://cdn.simpleicons.org/awwwards/white', width: 80, height: 80, category: 'design' },
+  { skill_name: 'gsap', Image: 'https://cdn.simpleicons.org/gsap', width: 80, height: 80, category: 'frontend' }, // brand green, looks fine as-is
+  { skill_name: 'threejs', Image: 'https://cdn.simpleicons.org/threedotjs/white', width: 80, height: 80, category: 'frontend' },
 ]
 
 export interface SocialLink {
@@ -235,6 +230,46 @@ export const projectsData: Project[] = [
     live: 'https://studio-gsap.vercel.app',
     tags: ['Animation', 'ScrollTrigger', 'Visual Storytelling', 'Premium UX', 'Frontend Engineering'],
   },
+  {
+    title: 'SrcStash',
+    image: "/srcstash.png",
+    description:
+      'A personal developer resource manager for saving and organizing websites, docs, GitHub repos, YouTube videos, and Instagram reels in one quiet, structured place.',
+    date: '06.2026', // TODO: confirm actual date
+    problem:
+      'Developers constantly stumble on useful links, docs, repos, and videos across the web but have no single, organized place to save and revisit them — bookmarks get buried and notes get scattered.',
+    approach:
+      'Built with Next.js and TypeScript, using a raw, brutalist dashboard UI that favors clear hierarchy and function over decoration, so saved resources stay easy to scan and retrieve regardless of type.',
+    infra:
+      'Next.js · TypeScript · Brutalist Dashboard UI',
+    challenge:
+      'Designing a single interface that handles very different content types — links, repos, videos, reels — without the UI feeling cluttered or generic.',
+    outcome:
+      'Shipped a focused personal stash tool that organizes mixed-format resources the way developers actually think, instead of relying on browser bookmarks.',
+    github: 'https://github.com/Coolkishann/cuddly-creations-lab',
+    live: 'https://srcstash.vercel.app/',
+    tags: ['Bookmarking', 'Developer Tools', 'Productivity', 'Dashboard UI'],
+  },
+  {
+    title: 'NovaShape Interactive 3D Experience',
+    image: "/novashape.png",
+    description:
+      'A premium scroll-driven 3D storytelling site where thousands of WebGL particles morph through shapes in sync with scroll-triggered motion content.',
+    date: '06.2026', // TODO: confirm actual date
+    problem:
+      'Most 3D portfolio pieces either look impressive but run poorly, or perform well but feel static — few combine dense particle rendering with tightly choreographed scroll storytelling.',
+    approach:
+      "Rendered over 12,000 particles at 60 FPS in Three.js using custom BufferGeometries for efficient memory use and fast state morphing, then choreographed every particle's position through GSAP ScrollTrigger timelines for pixel-perfect sync with scroll. Layered Framer Motion for UI-level micro-interactions and Lenis for smooth, eased scrolling, with custom vertex and fragment shaders driving the visual ribbon effects on the GPU — all inside a Next.js App Router foundation with Tailwind CSS.",
+    infra:
+      'Next.js · Three.js · GSAP · ScrollTrigger · Framer Motion · Lenis Scroll · GLSL Shaders · Tailwind CSS',
+    challenge:
+      'Keeping particle morphing and shader-driven effects at a stable 60 FPS while GSAP timelines, Lenis scroll easing, and Framer Motion UI transitions all stayed perfectly synchronized.',
+    outcome:
+      'Delivered a technical showcase site demonstrating high-performance WebGL rendering tightly bound to scroll, used as a portfolio piece highlighting 3D and motion engineering depth.',
+    github: 'https://github.com/Coolkishann/Threejs-Gsap-Scroll',
+    live: 'https://threejs-gsap-scroll.vercel.app/',
+    tags: ['Three.js', 'GSAP', 'WebGL', 'Particles', 'Scroll Animation', 'GLSL'],
+  }
 ];
 
 export interface Blog {

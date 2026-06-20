@@ -112,7 +112,7 @@ export function Navbar() {
 
           <div className="flex items-center gap-2">
             {/* Command Search Shortcut Indicator - Desktop Only */}
-            <button
+            {/* <button
               onClick={() => {
                 playKeystroke('standard')
                 const event = new KeyboardEvent('keydown', { key: 'k', metaKey: true, ctrlKey: true })
@@ -123,7 +123,7 @@ export function Navbar() {
               <Search className="h-3.5 w-3.5" />
               <span>{language === 'hi' ? 'खोजें' : language === 'ja' ? '検索' : 'Search'}</span>
               <kbd className="px-1.5 py-0.5 border border-border/60 rounded bg-muted/50 font-sans text-[8px] opacity-75">Ctrl K</kbd>
-            </button>
+            </button> */}
 
             {/* GitHub Repo link - Desktop Only */}
             <a
@@ -221,7 +221,7 @@ export function Navbar() {
             </div>
 
             {/* Mobile Search Button */}
-            <button
+            {/* <button
               onClick={() => {
                 setIsOpen(false)
                 playKeystroke('standard')
@@ -232,10 +232,10 @@ export function Navbar() {
             >
               <Search className="h-4 w-4" />
               <span>{language === 'hi' ? 'खोजें (Ctrl+K)' : language === 'ja' ? '検索 (Ctrl+K)' : 'Search (Ctrl+K)'}</span>
-            </button>
+            </button> */}
 
             {/* Mobile Language Selector */}
-            {mounted && (
+            {/* {mounted && (
               <div className="flex flex-col gap-1.5">
                 <span className="text-[9px] uppercase tracking-wider text-muted-foreground/60 font-bold font-mono">Language</span>
                 <div className="grid grid-cols-3 gap-1 p-1 border border-border/60 rounded-full bg-background/20 backdrop-blur-sm">
@@ -253,7 +253,7 @@ export function Navbar() {
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Mobile Preferences (Theme, Sound, GitHub) */}
             {mounted && (

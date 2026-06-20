@@ -2,7 +2,7 @@
 
 import { FC, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaTwitter, FaGithub } from 'react-icons/fa'
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
 import { Heart, ChevronUp, Globe } from 'lucide-react'
 
 import { useLanguage, Language } from '@/components/language-provider'
@@ -35,19 +35,19 @@ export const Footer: FC = () => {
 
   const socialLinks = [
     {
-      href: 'https://github.com/Ashlok2003',
+      href: 'https://github.com/Coolkishann',
       icon: <FaGithub className="w-3.5 h-3.5" />,
       label: 'GitHub',
     },
     {
-      href: 'https://www.linkedin.com/in/ashlok2003/',
+      href: 'https://www.linkedin.com/in/kishanvishwakarma1406',
       icon: <FaLinkedin className="w-3.5 h-3.5" />,
       label: 'LinkedIn',
     },
     {
-      href: 'https://x.com/ashlok2003',
-      icon: <FaTwitter className="w-3.5 h-3.5" />,
-      label: 'Twitter',
+      href: 'https://www.instagram.com/__kishxnnn/',
+      icon: <FaInstagram className="w-3.5 h-3.5" />,
+      label: 'Instagram',
     },
   ]
 
@@ -85,7 +85,7 @@ export const Footer: FC = () => {
             </div>
 
             {/* Language Selector Capsule (Flat, Segmented, Animated) */}
-            <div className="flex items-center gap-1 p-1 border border-border/60 rounded-full bg-muted/10 backdrop-blur-sm shadow-sm hover:border-border transition-all duration-300">
+            {/* <div className="flex items-center gap-1 p-1 border border-border/60 rounded-full bg-muted/10 backdrop-blur-sm shadow-sm hover:border-border transition-all duration-300">
               <div className="pl-2 pr-1 text-muted-foreground/40">
                 <Globe className="w-3.5 h-3.5" />
               </div>
@@ -99,8 +99,8 @@ export const Footer: FC = () => {
                       setLanguage(lang)
                     }}
                     className={`relative px-3 py-1 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider transition-colors duration-300 select-none ${isActive
-                        ? 'text-white dark:text-white'
-                        : 'text-muted-foreground hover:text-foreground'
+                      ? 'text-white dark:text-white'
+                      : 'text-muted-foreground hover:text-foreground'
                       }`}
                   >
                     {isActive && (
@@ -114,7 +114,7 @@ export const Footer: FC = () => {
                   </button>
                 )
               })}
-            </div>
+            </div> */}
 
             {/* Back to Top */}
             <button
