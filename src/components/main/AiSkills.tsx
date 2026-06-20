@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { FC } from 'react'
 
 import { useLanguage } from '@/components/language-provider'
-import { skills } from '@/constants'
 const SKILLS_LIST =
   'claude,gemini,stitch,chatgpt,perplexity,bolt,lovable,antigravity,omni,webflow,awwwards,dribbble,gsap,threejs,barbajs'
 
