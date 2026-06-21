@@ -55,8 +55,8 @@ export function Navbar() {
           <div className="flex items-center gap-7">
             {/* Logo Avatar with glow */}
             <Link
-              href="#about"
-              onClick={() => handleNavClick('#about')}
+              href="/"
+              onClick={() => handleNavClick('/')}
               className="shrink-0 relative group flex items-center"
               aria-label="Go to top"
             >
