@@ -78,7 +78,7 @@ export const Projects: FC = () => {
     return null
   }
 
-  const premiumProjects = projectsData
+  const premiumProjects = projectsData.slice(0, 4)
 
   return (
     <section id="projects" className="relative w-full bg-background transition-colors">
