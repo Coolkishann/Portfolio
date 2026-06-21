@@ -161,24 +161,67 @@ export const Hero: FC = () => {
                 <div className="relative">
                   {/* Backend System connection node background */}
                   {lightsOn && (
-                    <div className="absolute inset-[-24px] pointer-events-none z-0 animate-pulse">
-                      <svg viewBox="0 0 120 120" className="w-full h-full text-brand-blue opacity-45 dark:opacity-75" fill="none">
-                        {/* Server/DB schematic lines radiating from center */}
-                        <line x1="60" y1="60" x2="60" y2="12" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
-                        <line x1="60" y1="60" x2="108" y2="60" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
-                        <line x1="60" y1="60" x2="26" y2="94" stroke="currentColor" strokeWidth="1" strokeDasharray="3 3" />
+                    <div className="absolute inset-[-24px] pointer-events-none z-0">
+                      <svg
+                        viewBox="0 0 120 120"
+                        className="w-full h-full text-brand-blue opacity-45 dark:opacity-75"
+                        fill="none"
+                      >
+                        {/* Static schematic lines */}
+                        <line
+                          x1="60"
+                          y1="60"
+                          x2="60"
+                          y2="12"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          strokeDasharray="3 3"
+                        />
+                        <line
+                          x1="60"
+                          y1="60"
+                          x2="108"
+                          y2="60"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          strokeDasharray="3 3"
+                        />
+                        <line
+                          x1="60"
+                          y1="60"
+                          x2="26"
+                          y2="94"
+                          stroke="currentColor"
+                          strokeWidth="1"
+                          strokeDasharray="3 3"
+                        />
 
-                        {/* Nodes with pulsing/glow look */}
+                        {/* Static nodes */}
                         <circle cx="60" cy="12" r="3" fill="currentColor" />
                         <circle cx="108" cy="60" r="3" fill="currentColor" />
                         <circle cx="26" cy="94" r="3" fill="currentColor" />
 
-                        {/* Outer server circle grid */}
-                        <circle cx="60" cy="60" r="48" stroke="currentColor" strokeWidth="0.8" strokeDasharray="4 4" />
+                        {/* Rotating dashed outer circle */}
+                        <g className="origin-center animate-[spin_6s_linear_infinite]">
+                          <circle
+                            cx="60"
+                            cy="60"
+                            r="48"
+                            stroke="currentColor"
+                            strokeWidth="0.8"
+                            strokeDasharray="4 4"
+                          />
+                        </g>
                       </svg>
                     </div>
                   )}
-                  <div className={`relative size-20 rounded-full overflow-hidden border-2 z-10 transition-all duration-300 ${lightsOn ? 'border-brand-blue shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105' : 'border-border'}`}>
+
+                  <div
+                    className={`relative size-20 rounded-full overflow-hidden border-2 z-10 transition-all duration-300 ${lightsOn
+                        ? "border-brand-blue shadow-[0_0_15px_rgba(59,130,246,0.3)] scale-105"
+                        : "border-border"
+                      }`}
+                  >
                     <Image
                       src="/kishan.jpg"
                       alt="Kishan Vishwakarma Profile Photo"
