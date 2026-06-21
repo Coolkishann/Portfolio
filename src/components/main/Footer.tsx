@@ -1,17 +1,14 @@
 'use client'
 
 import { FC, useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
-import { Heart, ChevronUp, Globe } from 'lucide-react'
+import { Heart, ChevronUp } from 'lucide-react'
 
-import { useLanguage, Language } from '@/components/language-provider'
-import { useSound } from '@/components/sound-provider'
+import { useLanguage } from '@/components/language-provider'
 
 export const Footer: FC = () => {
   const [visitorCount, setVisitorCount] = useState<number>(0)
-  const { language, setLanguage, t } = useLanguage()
-  const { playKeystroke } = useSound()
+  const { language, t } = useLanguage()
 
   useEffect(() => {
     const savedCount = localStorage.getItem('visitorCount')

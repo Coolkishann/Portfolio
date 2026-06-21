@@ -5,9 +5,9 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { Sun, Moon, Menu, X, Search, Volume2, VolumeX } from 'lucide-react'
+import { Sun, Moon, Menu, X, Volume2, VolumeX } from 'lucide-react'
 import { useSound } from '@/components/sound-provider'
-import { useLanguage, Language } from '@/components/language-provider'
+import { useLanguage } from '@/components/language-provider'
 import { motion, AnimatePresence } from 'framer-motion'
 
 export function Navbar() {
@@ -17,7 +17,7 @@ export function Navbar() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   const { isSoundEnabled, toggleSound, playKeystroke } = useSound()
-  const { language, setLanguage, t } = useLanguage()
+  const { t } = useLanguage()
 
   useEffect(() => {
     setMounted(true)
@@ -41,11 +41,6 @@ export function Navbar() {
       }
     }
     // Route links (/projects etc.) are handled by Next.js Link href
-  }
-
-  const toggleLang = (lang: Language) => {
-    playKeystroke('standard')
-    setLanguage(lang)
   }
 
   return (
