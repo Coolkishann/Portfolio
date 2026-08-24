@@ -170,27 +170,6 @@ export const projectsData: Project[] = [
     tags: ['Worker Threads', 'WebSockets', 'File Processing', 'Parallel Computing'],
   },
   {
-    title: 'IT Management Dashboard',
-    image: "/inventree.png",
-    description:
-      'Enterprise-grade ITSM platform for asset tracking, service automation, and engineer productivity monitoring.',
-    date: '03.2025',
-    problem:
-      'Managing IT assets and service workflows across teams often lacks visibility and automation.',
-    approach:
-      'Developed a full-stack platform with RBAC, caching, audit logs, and automated operational workflows.',
-    infra:
-      'Next.js · NestJS · PostgreSQL · Prisma · Redis',
-    challenge:
-      'Handling complex permissions, background processing, and scalable data access patterns.',
-    outcome:
-      'Delivered a centralized IT operations dashboard improving visibility and workflow efficiency.',
-    github: 'https://github.com/Coolkishann/it-client',
-    live: 'https://github.com/Coolkishann/it-client',
-    tags: ['RBAC', 'Caching', 'Background Jobs', 'Audit Logging'],
-  },
-
-  {
     title: 'Moto Edge 60 Fusion Showcase',
     image: "/motorola.png",
     description:
